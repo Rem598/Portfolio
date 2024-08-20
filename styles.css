@@ -1,0 +1,129 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gradient Background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #4e54c8, #aeb1f8);
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Project Title */
+.project-title {
+    color: darkorange; /* Change to a color you prefer */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Project Container */
+.project {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Button Style */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: darkorange;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Alignment */
+.project {
+    max-width: 600px;
+    margin-bottom: 20px;
+    margin: 0 auto; /* Center the project container */
+}
+
+/* Homepage Paragraph */
+h2 {
+    color: white;
+}
+
+p {
+    font-weight: normal; /* Reducing the boldness */
+    color: #1a1919;
+    font-size: 0.5em;
+    margin: 10px 0;
+}
+
+header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #d5d6e7;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.content {
+    text-align: center;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 5em;
+    margin: 0;
+}
+
+p {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+/* Ensure skills.html and projects.html share the same style */
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
