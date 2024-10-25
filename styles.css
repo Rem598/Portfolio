@@ -1,187 +1,156 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    height: 100%;
-    line-height: 1.6;
-    scroll-behavior: smooth;  
-  }
-  
-  nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(121, 173, 147, 0.8);
-    padding: 15px 0;
-    text-align: center;
-    z-index: 1000;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-  }
-  
-  nav ul li {
-    margin: 0 20px;
-  }
-  
-  nav ul li a {
-    color: black;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  nav ul li a:hover {
-    color: darkorange;
-  }
-  
-  .section {
-    padding: 100px 20px;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    background: linear-gradient(to right , rgb(109, 153, 236), rgb(199, 199, 241));
-  }
-  
-  #about {
-    background-color: #f4f4f4;
-  }
-  /* Profile Image */
-  .profile-pic {
-    margin-bottom: 10px;
-    display: flex; /* Center the image if needed */
-    justify-content: center; /* Center horizontally */
-    align-items: center; 
-  }
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #bceaf0; /* Base background color */
+  position: relative;
+}
 
-  .profile-pic img {
-    width: 250px; /* Set image size */
-    height: 250px; /* Set image size */
-    object-fit: cover; /* Ensure the image fills the circle */
-    border-radius: 50%; /* Make it circular */
-    border: 5px solid #fff; /* Optional: Add a border around the image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
-  } 
-  
-  #skills {
-    background-color: #333;
-    color: #fff;
+/* Background Circles */
+.circle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;    
+  pointer-events: none; /* Allow clicks to pass through */
+  z-index: -1; /* Keep circles behind content */
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(51, 122, 183, 0.3); /* Adjust color and opacity */
+  animation: circle-animation 6s infinite ease-in-out;
+  opacity: 0;
+}
+
+/* Keyframe animation for circles */
+@keyframes circle-animation {
+  0% {
+    transform: scale(0);
+    opacity: 1;
   }
-  
-  .skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 20px;
+  100% {
+    transform: scale(5); /* Adjust size for expansion */
+    opacity: 0;
   }
-  
-  .skill-box {
-    background-color: rgba(121, 173, 147, 0.8);
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-    color: black;
-    font-size: 16px;
-  }
-  
-  #projects {
-    background-color: #eed7d7;
-  }
-  
-  .project-boxes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-  }
-  
-  .project-box {
-    background-color: #e5e4f7;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .project-box h2 {
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .project-box p {
-    margin-bottom: 15px;
-    color: #666;
-  }
-  
-  .button {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: darkgreen;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  .button:hover {
-    background-color: darkorange;
-  }
-  
-  #contact {
-    background-color: #333;
-    color: black;
-  }
-  
-  #contact a {
-    color: navyblue;
-    text-decoration: none;
-  }
-  
-  #contact a:hover {
-    text-decoration: underline;
-  }
-  
-  footer {
-    padding: 20px;
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-  }
-  
-  @media (max-width: 768px) {
-    nav ul {
-      flex-direction: column;
-      padding: 10px 0;
-    }
-  
-    nav ul li {
-      margin: 10px 0;
-    }
-    .about-card {
-        
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        margin: 15px 0;
-        border-radius: 8px;
-    }
-    /* About Section */
-#about {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #f4f4f4;
 }
 
 
+nav {
+  background-color: darkgreen;
+  padding: 10px;
+}
 
-  
-    .skills-container,
-    .project-boxes {
-      grid-template-columns: 1fr;
-    }
-  }
-  
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.section {
+  padding: 20px;
+  margin: 30px;
+}
+
+.profile-pic img {
+  max-width: 150px;
+  border-radius: 50%;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-box {
+  background-color: darkgreen;
+  color: #fff;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.project-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-box {
+  background-color: #fdf0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-box:hover {
+  transform: translateY(-10px); /* Lift the box on hover */
+}
+
+.project-box img {
+  width: 100%;
+  height: auto;
+}
+
+.project-content {
+  padding: 15px;
+}
+
+.project-content h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.project-content p {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Background Shapes */
+#projects::before, #projects::after {
+  content: '';
+  position: absolute;
+  z-index: -1; /* Keep shapes behind the content */
+  opacity: 0.15;
+  border-radius: 50%;
+}
+
+#projects::before {
+  width: 200px;
+  height: 200px;
+  background-color: #ff8000;
+  top: -50px;
+  left: -50px;
+}
+
+#projects::after {
+  width: 300px;
+  height: 300px;
+  background-color: #333;
+  bottom: -75px;
+  right: -75px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: darkgreen;
+  color: #fff
+}
