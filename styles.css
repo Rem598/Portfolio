@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #bceaf0; 
+  background-color: white; 
 }
 
 
@@ -18,7 +18,7 @@ body {
 .hexagon {
   width: 150px; 
   height: 150px;
-  background-color: #f1a567; 
+  background-color: #facca7; 
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
 
@@ -58,7 +58,7 @@ body {
 
 
 nav {
-  background-color: darkgreen;
+  background-color: rgb(67, 160, 197);;
   padding: 10px;
 }
 
@@ -94,7 +94,7 @@ nav ul li a {
 }
 
 .skill-box {
-  background-color: darkgreen;
+  background-color: rgb(22, 177, 216);
   color: #fff;
   padding: 10px;
   margin: 5px;
@@ -108,7 +108,7 @@ nav ul li a {
 }
 
 .project-box {
-  background-color: #fdf0f0;
+  background-color: #ece4e4;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
@@ -168,7 +168,7 @@ nav ul li a {
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: darkgreen;
+  background-color: rgb(109, 79, 14);
   color: #fff
 }
 .button:hover{
@@ -176,7 +176,7 @@ nav ul li a {
 }
 
 footer{
-  background-color:darkgreen;
+  background-color:rgb(67, 160, 197);
   padding:20px;
   margin:auto;
   padding: 30px;
